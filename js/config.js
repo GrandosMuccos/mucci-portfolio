@@ -23,7 +23,7 @@ const siteConfig = {
   /* ---------- Logo & Bilder ---------- */
   logoText: "MUCCI",                 // Text-Logo (wird genutzt, wenn logoImage leer ist)
   logoImage: "",                     // z. B. "assets/logos/logo.svg"
-  heroImage: "Bilder/Spotify Banner.png",   // Hero-Hintergrundbild (leer = nur Farbverlauf)
+  heroImage: "https://i.postimg.cc/VLVMyFWk/Spotify-Banner.png",   // Hero-Hintergrundbild (leer = nur Farbverlauf)
 
   /* ---------- Social Media (Footer + Kontaktseite) ---------- */
   social: [

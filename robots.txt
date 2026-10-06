@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Domain ersetzen, sobald bekannt
+Sitemap: https://www.DEINE-DOMAIN.de/sitemap.xml

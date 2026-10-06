@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kontakt – Mucci</title>
+  <meta name="description" content="Kontakt für Freelance-Anfragen, Kooperationen und Bewerbungen.">
+  <meta name="author" content="Yannik Schmitt">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/config.js"></script>
+
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.className += ' js';
+
+      var t = (siteConfig.defaultTheme === 'light') ? 'light' : 'dark';
+
+      try {
+        var s = localStorage.getItem(
+          (siteConfig.storagePrefix || 'mucci') + '-theme'
+        );
+
+        if (s === 'light' || s === 'dark') {
+          t = s;
+        }
+      } catch (e) {}
+
+      d.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+
+<body data-page="contact">
+
+  <div id="site-header"></div>
+
+  <main id="main" tabindex="-1">
+
+    <!-- HEADER -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow reveal" data-i18n="contactEyebrow"></p>
+
+        <h1 class="page-title reveal" data-i18n="contactTitle"></h1>
+
+        <p class="page-intro reveal" data-i18n="contactIntro"></p>
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="section">
+      <div class="container">
+
+        <div class="reveal">
+
+          <h2 class="h3" data-i18n="contactEmailTitle">
+            Kontakt
+          </h2>
+
+          <p class="form-note">
+            Für Freelance-Anfragen, Kooperationen und weitere Anliegen
+            kannst du mich direkt per E-Mail erreichen.
+          </p>
+
+          <!-- E-MAIL -->
+          <div class="contact-email-box">
+
+            <span
+              class="contact-email"
+              data-email-text>
+            </span>
+
+          </div>
+
+
+          <!-- SOCIAL MEDIA -->
+          <h2 class="h3 mt-lg" data-i18n="contactSocialTitle">
+            Social Media
+          </h2>
+
+          <ul id="social-list" class="social-list"></ul>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <noscript>
+    <p style="padding:1rem;text-align:center">
+      Diese Website benötigt JavaScript.
+      / This website requires JavaScript.
+    </p>
+  </noscript>
+
+  <script src="js/content.js"></script>
+  <script src="js/media.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

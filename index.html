@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mucci – Video Editor, Graphic & Motion Designer</title>
+  <meta name="description" content="Portfolio von Mucci (Yannik Schmitt): Video Editing, Grafikdesign, Motion Design und Content Creation.">
+  <meta name="author" content="Yannik Schmitt">
+  <link rel="canonical" href="https://www.DEINE-DOMAIN.de/">
+
+  <!-- Open Graph / Twitter (Domain in config.js und hier ersetzen) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mucci Portfolio">
+  <meta property="og:title" content="Mucci – Video Editor, Graphic & Motion Designer">
+  <meta property="og:description" content="Portfolio von Mucci (Yannik Schmitt): Video Editing, Grafikdesign, Motion Design und Content Creation.">
+  <meta property="og:url" content="https://www.DEINE-DOMAIN.de/">
+  <meta property="og:image" content="https://www.DEINE-DOMAIN.de/assets/images/og-image.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mucci – Video Editor, Graphic & Motion Designer">
+  <meta name="twitter:description" content="Portfolio von Mucci (Yannik Schmitt): Video Editing, Grafikdesign, Motion Design und Content Creation.">
+  <meta name="twitter:image" content="https://www.DEINE-DOMAIN.de/assets/images/og-image.jpg">
+  <meta name="theme-color" content="#0b0b0b">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <script src="js/config.js"></script>
+  <script>
+    /* Theme sofort setzen (verhindert Aufblitzen beim Laden) */
+    (function () {
+      var d = document.documentElement;
+      d.className += ' js';
+      var t = (siteConfig.defaultTheme === 'light') ? 'light' : 'dark';
+      try {
+        var s = localStorage.getItem((siteConfig.storagePrefix || 'mucci') + '-theme');
+        if (s === 'light' || s === 'dark') t = s;
+      } catch (e) {}
+      d.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body data-page="home">
+
+  <!-- Header wird von script.js erzeugt -->
+  <div id="site-header"></div>
+
+  <main id="main" tabindex="-1">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow reveal"><span data-config="name">Yannik Schmitt</span></p>
+        <h1 id="hero-title" class="hero-title reveal" data-config="creatorName">Mucci</h1>
+        <p class="hero-roles reveal">
+          <span data-i18n="heroRole1"></span>
+          <span data-i18n="heroRole2"></span>
+          <span data-i18n="heroRole3"></span>
+        </p>
+        <p class="hero-tagline reveal" data-i18n="heroTagline"></p>
+        <div class="btn-row reveal">
+          <a class="btn btn-primary" href="portfolio.html"><span data-i18n="heroBtnWork"></span><span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="contact.html"><span data-i18n="heroBtnContact"></span><span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <a class="hero-scroll" href="#featured"><span data-i18n="heroScroll"></span></a>
+    </section>
+
+    <!-- ZAHLEN (aus content.js → stats) -->
+    <div class="container">
+      <div class="stats" id="stats-list" role="group" data-i18n-aria="homeStatsLabel"></div>
+    </div>
+
+    <!-- FEATURED PROJECTS (aus content.js → projects mit featured: true) -->
+    <section class="section" id="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal" data-i18n="homeFeaturedEyebrow"></p>
+            <h2 id="featured-title" class="section-title reveal" data-i18n="homeFeaturedTitle"></h2>
+          </div>
+          <a class="btn btn-ghost reveal" href="portfolio.html"><span data-i18n="homeFeaturedAll"></span><span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div id="featured-grid" class="card-grid"></div>
+      </div>
+    </section>
+
+    <!-- ÜBER MICH (Teaser) -->
+    <section class="section section-alt" aria-labelledby="teaser-title">
+      <div class="container">
+        <p class="eyebrow reveal" data-i18n="homeAboutEyebrow"></p>
+        <h2 id="teaser-title" class="section-title reveal" data-i18n="homeAboutTitle"></h2>
+        <p class="page-intro reveal" data-i18n="homeAboutText"></p>
+        <p class="reveal"><a class="btn btn-ghost" href="about.html"><span data-i18n="homeAboutLink"></span><span class="arrow" aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <!-- KONTAKT CTA -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-box reveal">
+          <h2 id="cta-title" data-i18n="homeCtaTitle"></h2>
+          <p data-i18n="homeCtaText"></p>
+          <a class="btn btn-primary" href="#" data-mailto><span data-i18n="homeCtaBtn"></span><span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer wird von script.js erzeugt -->
+  <div id="site-footer"></div>
+
+  <noscript><p style="padding:1rem;text-align:center">Diese Website benötigt JavaScript. / This website requires JavaScript.</p></noscript>
+
+  <script src="js/content.js"></script>
+  <script src="js/media.js"></script>
+  <script src="js/language.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
